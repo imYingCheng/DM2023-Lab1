@@ -36,3 +36,10 @@ def tokenize_text(text, remove_stopwords=False):
             # filters here
             tokens.append(word)
     return tokens
+
+def format_sentence(docs):
+    D = []
+    for d in docs['sentence']:
+        temp_d = " ".join(d.split("\n")).strip('\n\t')
+        D.append([temp_d])
+    return D
